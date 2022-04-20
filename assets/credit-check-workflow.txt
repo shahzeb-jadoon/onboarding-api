@@ -1,8 +1,12 @@
 ## Credit Check Workflow
 
-Home -> CreditCheckHistory
-CreditCheckHistory -> CreditCheckForm(companyName) -> CreditUpdate
-CreditUpdate -> CreditCheckHistory
+Home -> CreditCheckHistory[ratingId, companyName, dateRequested, ratingValue]
+CreditCheckHistory -> CreditCheckForm(companyName) -> CreditUpdate[ratingId, companyName, dateRequested, ratingValue]
+CreditUpdate -> CreditCheckHistory[ratingId, companyName, dateRequested, ratingValue]
 CreditCheckHistory -> Home
 
-
+Validated Names:
+ * ratingId := https://schema.org/identifier
+ * companyName := https://schema.org/legalName
+ * dateRequested := https://schema.org/Date
+ * ratingValue := https://schema.org/ratingValue

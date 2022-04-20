@@ -1,0 +1,11 @@
+title Credit Check Workflow
+
+Home->+CheckCreditHistory: [ratingId, companyName, ratingValue, dateRequested]
+
+CheckCreditHistory->+CreditCheckForm:
+
+CreditCheckForm->+CreditUpdate: (companyName)
+
+CreditUpdate-->-CheckCreditHistory: [ratingId, companyName, ratingValue, dateRequested]
+
+CheckCreditHistory-->-Home:

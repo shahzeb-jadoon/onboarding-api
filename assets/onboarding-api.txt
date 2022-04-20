@@ -1,0 +1,18 @@
+title BigCo, Inc. Onboarding API
+
+Home->+WiP: startOnboarding(identifier)
+
+WiP->+companyData: collectCompanyData(identifier, companyName, address, email, telephone, status)
+companyData-->-WiP: saveToWiP(identifier, companyName, address, email, telephone, status)
+
+WiP->+accountData: collectAccountData(identifier, division, discount, creditLimit)
+accountData-->-WiP: saveToWiP(identifier, division, discount, creditLimit)
+
+WiP->+activityData: collectActivityData(identifier, activityType, dateScheduled, notes)
+activityData-->-WiP: saveToWiP(identifier, activityType, dateScheduled, notes)
+
+WiP->+finalizeWiP: completeOnboarding(identifier)
+finalizeWiP-->-Home: goHome
+
+WiP->+cancelWiP: abandonOnboarding(identifier)
+cancelWiP-->-Home: goHome
