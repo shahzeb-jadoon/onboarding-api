@@ -21,6 +21,11 @@
   ],
   "author": "Shahzeb Jadoon <shahzeb.jadoon.sj@gmail.com>",
   "license": "ISC",
+  "assets" : {
+    "diagram" : "onboarding-api.png",
+    "alps" : "OnboardingAPI.json",
+    "apiDocs" : "OnboardingAPI.md"
+  },
   "bugs": {
     "url": "https://github.com/shahzeb-jadoon/onboarding-api/issues"
   },
